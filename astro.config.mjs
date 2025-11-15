@@ -11,7 +11,7 @@ import config from "./src/config/config.json";
 
 // https://astro.build/config
 export default defineConfig({
-  site: config.site.base_url ? config.site.base_url : "https://kamihi.github.io",
+  site: config.site.base_url ? config.site.base_url : "https://kamihi.github.io/AzurePlanet-Webpage/",
   base: config.site.base_path ? config.site.base_path : "/AzurePlanet-Webpage",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: { service: sharp() },
