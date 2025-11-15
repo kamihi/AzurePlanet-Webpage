@@ -7,4 +7,4 @@ draft: false
 
 ![image](/AzurePlanet-Webpage/images/img-Horai.png)
 
-誠意制作中...
+鋭意作成中

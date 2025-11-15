@@ -15,7 +15,7 @@ features:
     image: "/images/img-Horai.png"
     content: "最大４人対戦のオンライン刀ボードゲーム！"
     bulletpoints:
-      - "誠意制作中"
+      - "鋭意作成中"
     button:
       enable: true
       label: "ゲーム詳細"
