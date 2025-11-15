@@ -2,7 +2,7 @@
   "site": {
     "title": "AzurePlanet",
     "base_url": "https://kamihi.github.io/AzurePlanet-Webpage/",
-    "base_path": "/",
+    "base_path": "/AzurePlanet-Webpage",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo_k_w.png",
