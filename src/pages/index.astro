@@ -12,52 +12,12 @@ const call_to_action = await getListPage("ctaSection", "call-to-action");
 const testimonial = await getListPage("testimonialSection", "testimonial");
 
 const { banner, features } = homepage.data;
+
+import { render } from "astro:content";
+const { Content } = await render(homepage);
 ---
 
 <Base>
-  <!-- Banner -->
-  <section class="section pt-14">
-    <div class="container">
-      <div class="row justify-center">
-        <div class="lg:col-7 md:col-9 mb-8 text-center">
-          <h1
-            set:html={markdownify(banner.title)}
-            class="mb-4 text-h3 lg:text-h1"
-          />
-          <p set:html={markdownify(banner.content)} class="mb-8" />
-          {
-            banner.button.enable && (
-              <a
-                class="btn btn-primary"
-                href={banner.button.link}
-                target={
-                  banner.button.link.startsWith("http") ? "_blank" : "_self"
-                }
-                rel="noopener"
-              >
-                {banner.button.label}
-              </a>
-            )
-          }
-        </div>
-        {
-          banner.image && (
-            <div class="col-12">
-              <ImageMod
-                src={banner.image}
-                height={380}
-                width={1200}
-                alt="banner"
-                format="webp"
-              />
-            </div>
-          )
-        }
-      </div>
-    </div>
-  </section>
-  <!-- /Banner -->
-
   <!-- Features -->
   {
     features.map((feature, index: number) => (
@@ -65,12 +25,12 @@ const { banner, features } = homepage.data;
         <div class="container">
           <div class="row items-center justify-between">
             <div
-              class={`mb:md-0 mb-6 md:col-5 ${index % 2 !== 0 && "md:order-2"}`}
+              class={`mb:md-0 mb-6 md:col-6 ${index % 2 !== 0 && "md:order-2"}`}
             >
               <ImageMod
                 src={feature.image}
-                height={480}
-                width={520}
+                height={580}
+                width={620}
                 alt={feature.title}
                 format="webp"
               />
@@ -99,6 +59,4 @@ const { banner, features } = homepage.data;
   }
   <!-- /Features -->
 
-  <Testimonial testimonial={testimonial} />
-  <CallToAction call_to_action={call_to_action} />
 </Base>
