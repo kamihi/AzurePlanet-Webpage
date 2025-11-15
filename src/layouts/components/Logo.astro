@@ -1,6 +1,7 @@
 ---
 import config from "@/config/config.json";
 import ImageMod from "./ImageMod.astro";
+import { withBasePath } from "@/lib/utils/basePath";
 
 const { src, srcDarkmode }: { src?: string; srcDarkmode?: string } =
   Astro.props;
@@ -21,9 +22,10 @@ const {
 } = config.site;
 
 const { theme_switcher }: { theme_switcher: boolean } = config.settings;
+const homeHref = withBasePath();
 ---
 
-<a href="/" class="navbar-brand inline-block">
+<a href={homeHref} class="navbar-brand inline-block">
   {
     src || srcDarkmode || logo || logo_darkmode ? (
       <>
