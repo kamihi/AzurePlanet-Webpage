@@ -2,7 +2,7 @@
   "main": [
     {
       "name": "Home",
-      "url": "/"
+      "url": "/AzurePlanet-Webpage"
     },
     {
       "name": "Games",
@@ -11,21 +11,21 @@
       "children": [
         {
           "name": "蓬莱刀遊戯",
-          "url": "/horai"
+          "url": "/AzurePlanet-Webpage/horai"
         },
         {
           "name": "ストーリーアーカイブ",
-          "url": "/storyarchive"
+          "url": "/AzurePlanet-Webpage/storyarchive"
         }
       ]
     },
     {
       "name": "About",
-      "url": "/about"
+      "url": "/AzurePlanet-Webpage/about"
     },
     {
       "name": "Contact",
-      "url": "/az-contact"
+      "url": "/AzurePlanet-Webpage/az-contact"
     }
   ],
   "footer": [

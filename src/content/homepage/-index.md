@@ -19,7 +19,7 @@ features:
     button:
       enable: true
       label: "ゲーム詳細"
-      link: "/horai"
+      link: "/AzurePlanet-Webpage/horai"
 
   - title: "ストーリーアーカイブ"
     image: "/images/img-storyarchive.png"
@@ -34,5 +34,5 @@ features:
     button:
       enable: true
       label: "ゲーム詳細"
-      link: "/storyarchive"
+      link: "/AzurePlanet-Webpage/storyarchive"
 ---
