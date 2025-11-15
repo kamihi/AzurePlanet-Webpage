@@ -4,6 +4,7 @@ import ThemeSwitcher from "@/components/ThemeSwitcher.astro";
 import config from "@/config/config.json";
 import menu from "@/config/menu.json";
 import { IoSearch } from "react-icons/io5";
+import { withBasePath } from "@/lib/utils/basePath";
 
 export interface ChildNavigationLink {
   name: string;
@@ -20,6 +21,7 @@ export interface NavigationLink {
 const { main }: { main: NavigationLink[] } = menu;
 const { navigation_button, settings } = config;
 const { pathname } = Astro.url;
+const homeHref = withBasePath();
 ---
 
 <header class={`header z-30 ${settings.sticky_header && "sticky top-0"}`}>
@@ -65,7 +67,7 @@ const { pathname } = Astro.url;
                   class={`nav-link inline-flex items-center ${
                     menu.children?.map(({ url }) => url).includes(pathname) ||
                     menu.children
-                      ?.map(({ url }) => `${url}/`)
+                      ?.map(({ url }) => `${homeHref} / {url}/`)
                       .includes(pathname)
                       ? "active"
                       : ""
