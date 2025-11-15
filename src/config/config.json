@@ -30,7 +30,7 @@
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "CopyRight © 2024-2025 Azure Planet. All Rights Reserved."
+    "copyright": "2024-2025 Azure Planet."
   },
 
   "navigation_button": {
@@ -51,8 +51,8 @@
   },
 
   "metadata": {
-    "meta_author": "zeon.studio",
-    "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
+    "meta_author": "AzurePlanet",
+    "meta_image": "/images/logo_b_h.png",
+    "meta_description": "AzurePlanet-Webpage"
   }
 }
