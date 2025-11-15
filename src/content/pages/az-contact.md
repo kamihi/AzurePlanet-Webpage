@@ -5,6 +5,5 @@ description: "this is meta description"
 draft: false
 ---
 
-Gmail : zekutasiki@gmail.com
 
 X : https://x.com/azureplanet24

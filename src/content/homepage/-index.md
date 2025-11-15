@@ -13,7 +13,7 @@ banner:
 features:
   - title: "蓬莱刀遊戯"
     image: "/images/img-Horai.png"
-    content: "最大４人対戦のオンライン刀ボードゲーム！"
+    content: "最大４人対戦のデジタルボードゲーム！"
     bulletpoints:
       - "鋭意作成中"
     button:
@@ -23,7 +23,7 @@ features:
 
   - title: "ストーリーアーカイブ"
     image: "/images/img-storyarchive.png"
-    content: "ブルーアーカイブ2次創作ゲーム。オムニバス形式のシナリオ。"
+    content: "ブルーアーカイブ二次創作ゲーム。オムニバス形式のシナリオ。"
     bulletpoints:
       - "シロコのチュートリアル(シロコが中心のお話)"
       - "RABBITシューティング(RABBIT小隊が中心のお話)"
