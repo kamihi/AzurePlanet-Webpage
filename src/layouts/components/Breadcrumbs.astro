@@ -1,24 +1,40 @@
 ---
 import { humanize } from "@/lib/utils/textConverter";
+import {
+  normalizePathname,
+  removeBasePath,
+  withBasePath,
+} from "@/lib/utils/basePath";
 
 const { className }: { className?: string } = Astro.props;
 
-const paths = Astro.url.pathname.split("/").filter((x) => x);
+const relativePath = removeBasePath(Astro.url.pathname);
+const paths =
+  relativePath === "/"
+    ? []
+    : relativePath
+        .split("/")
+        .map((segment) => segment.trim())
+        .filter((segment) => segment);
+const currentPath = normalizePathname(Astro.url.pathname);
+const homeHref = withBasePath();
 let parts = [
   {
     label: "Home",
-    href: "/",
-    "aria-label": Astro.url.pathname === "/" ? "page" : undefined,
+    href: homeHref,
+    "aria-label":
+      currentPath === normalizePathname(homeHref) ? "page" : undefined,
   },
 ];
 
 paths.forEach((label: string, i: number) => {
-  const href = `/${paths.slice(0, i + 1).join("/")}`;
+  const href = withBasePath(paths.slice(0, i + 1).join("/"));
   label !== "page" &&
     parts.push({
       label: humanize(label.replace(".html", "").replace(/[-_]/g, " ")) || "",
       href,
-      "aria-label": Astro.url.pathname === href ? "page" : undefined,
+      "aria-label":
+        currentPath === normalizePathname(href) ? "page" : undefined,
     });
 });
 ---
