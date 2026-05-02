@@ -10,6 +10,36 @@
   @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary;
 }
 
+.btn-dlsite {
+  border-color: #0b8bd8;
+  background: linear-gradient(180deg, #16a8f5 0%, #0576c9 100%);
+  color: #ffffff;
+}
+
+.btn-booth {
+  border-color: #e63b5f;
+  background: linear-gradient(180deg, #fb6d84 0%, #e43b5f 100%);
+  color: #ffffff;
+}
+
 .btn-outline-primary {
   @apply border-dark text-text-dark hover:bg-dark dark:hover:text-text-dark bg-transparent hover:text-white dark:border-darkmode-primary dark:text-white dark:hover:bg-darkmode-primary;
+}
+
+.feature-detail-button {
+  @apply inline-flex h-[42px] min-w-[153px] items-center justify-between rounded-md border-0 px-7 text-sm font-bold text-white shadow-sm hover:text-white;
+  text-transform: none;
+}
+
+.feature-detail-button::after {
+  content: "\2192";
+  @apply ml-5 text-base leading-none;
+}
+
+.feature-detail-button--horai {
+  background: linear-gradient(180deg, #e26243 0%, #d55335 100%);
+}
+
+.feature-detail-button--story {
+  background: linear-gradient(180deg, #2f82f2 0%, #1f6ee7 100%);
 }

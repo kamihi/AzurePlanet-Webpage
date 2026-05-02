@@ -4,13 +4,17 @@ const Button = ({
   label,
   link,
   style,
+  variant,
   rel,
 }: {
   label: string;
   link: string;
   style?: string;
+  variant?: string;
   rel?: string;
 }) => {
+  const variantClass = variant ? `btn-${variant}` : "";
+
   return (
     <a
       href={link}
@@ -18,7 +22,7 @@ const Button = ({
       rel={`noopener noreferrer ${
         rel ? (rel === "follow" ? "" : rel) : "nofollow"
       }`}
-      className={`btn mb-4 me-4 hover:text-white dark:hover:text-black hover:no-underline ${
+      className={`btn mb-4 me-4 hover:text-white dark:hover:text-black hover:no-underline ${variantClass} ${
         style === "outline" ? "btn-outline-primary" : "btn-primary"
       }`}
     >
