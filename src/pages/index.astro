@@ -21,7 +21,9 @@ const { Content } = await render(homepage);
   <!-- Features -->
   {
     features.map((feature, index: number) => (
-      <section class={`section-sm ${index % 2 === 0 && "bg-gradient"}`}>
+      <section
+        class={`section-sm feature-section feature-section--tone-${(index % 3) + 1}`}
+      >
         <div class="container">
           <div class="row items-center justify-between">
             <div
@@ -36,6 +38,13 @@ const { Content } = await render(homepage);
               />
             </div>
             <div class={`md:col-7 lg:col-6 ${index % 2 !== 0 && "md:order-1"}`}>
+              {feature.tags.length > 0 && (
+                <ul class="feature-tags" aria-label={`${feature.title} tags`}>
+                  {feature.tags.map((tag: string) => (
+                    <li class="feature-tag" set:html={markdownify(tag)} />
+                  ))}
+                </ul>
+              )}
               <h2 set:html={markdownify(feature.title)} class="mb-4" />
               <p set:html={markdownify(feature.content)} class="mb-8 text-lg" />
               <ul>
@@ -51,7 +60,9 @@ const { Content } = await render(homepage);
                   class={`btn feature-detail-button ${
                     index === 0
                       ? "feature-detail-button--horai"
-                      : "feature-detail-button--story"
+                      : index === 1
+                        ? "feature-detail-button--kaityou"
+                        : "feature-detail-button--story"
                   } mt-5`}
                   href={feature.button.link}
                 >

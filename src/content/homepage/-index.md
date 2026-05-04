@@ -12,6 +12,10 @@ banner:
 # Features
 features:
   - title: "蓬莱刀遊戯"
+    tags:
+      - "一次創作"
+      - "PC"
+      - "カードバトル"
     image: "/images/img-Horai.png"
     content: "最大４人対戦のデジタルボードゲーム！"
     bulletpoints:
@@ -21,7 +25,25 @@ features:
       label: "ゲーム詳細"
       link: "/AzurePlanet-Webpage/horai"
 
+  - title: "連邦生徒会長の行政業務"
+    tags:
+      - "二次創作/ブルーアーカイブ"
+      - "WEB"
+      - "早押し判断"
+    image: "/images/img-kaityou.png"
+    content: "ブルーアーカイブ二次創作ミニゲーム"
+    bulletpoints:
+      - "届いた書類を「承認」「差し戻し」「相談」で処理する行政判断ゲームです。正しい判断で、秩序と信頼を守りましょう。"
+    button:
+      enable: true
+      label: "ゲーム詳細"
+      link: "/AzurePlanet-Webpage/kaityou"
+
   - title: "ストーリーアーカイブ"
+    tags:
+      - "二次創作/ブルーアーカイブ"
+      - "PC"
+      - "ノベルシューティング"
     image: "/images/img-storyarchive.png"
     content: "ブルーアーカイブ二次創作ゲーム。オムニバス形式のシナリオ。"
     bulletpoints:

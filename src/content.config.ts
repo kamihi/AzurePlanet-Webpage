@@ -87,6 +87,7 @@ const homepageCollection = defineCollection({
     features: z.array(
       z.object({
         title: z.string(),
+        tags: z.array(z.string()).default([]),
         image: z.string(),
         content: z.string(),
         bulletpoints: z.array(z.string()),

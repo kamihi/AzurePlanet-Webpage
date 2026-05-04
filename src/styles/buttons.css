@@ -1,13 +1,20 @@
 .btn {
-  @apply inline-block rounded border border-transparent px-5 py-2 font-semibold capitalize transition;
+  @apply inline-block rounded border border-transparent px-[3.75rem] py-4 font-semibold capitalize transition;
+  box-shadow: 0 12px 24px rgb(15 23 42 / 0.18);
+  max-width: 100%;
 }
 
 .btn-sm {
-  @apply rounded-sm px-4 py-1.5 text-sm;
+  @apply rounded-sm px-12 py-3 text-sm;
 }
 
 .btn-primary {
   @apply border-primary bg-primary dark:border-darkmode-primary dark:text-text-dark text-white dark:bg-darkmode-primary;
+}
+
+.btn-kaityou-play {
+  @apply px-[3.75rem] py-4;
+  box-shadow: 0 12px 24px rgb(37 99 235 / 0.28);
 }
 
 .btn-dlsite {
@@ -27,7 +34,8 @@
 }
 
 .feature-detail-button {
-  @apply inline-flex h-[42px] min-w-[153px] items-center justify-between rounded-md border-0 px-7 text-sm font-bold text-white shadow-sm hover:text-white;
+  @apply inline-flex h-[48px] min-w-[153px] items-center justify-between rounded-md border-0 px-7 text-sm font-bold text-white shadow-sm hover:text-white;
+  box-shadow: 0 12px 24px rgb(15 23 42 / 0.18);
   text-transform: none;
 }
 
@@ -38,6 +46,10 @@
 
 .feature-detail-button--horai {
   background: linear-gradient(180deg, #e26243 0%, #d55335 100%);
+}
+
+.feature-detail-button--kaityou {
+  background: linear-gradient(180deg, #8f8824 0%, #8f8824 100%);
 }
 
 .feature-detail-button--story {

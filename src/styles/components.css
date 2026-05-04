@@ -4,7 +4,16 @@
 }
 
 .section-sm {
-  @apply py-16 xl:py-20;
+  @apply py-10 xl:py-14;
+}
+
+
+.feature-tags {
+  @apply mb-3 flex max-w-full flex-wrap gap-2 !list-none !p-0;
+}
+
+.feature-tag {
+  @apply !m-0 inline-flex min-h-[24px] min-w-[70px] max-w-full items-center justify-center whitespace-normal break-words border-[5px] border-[#333] bg-black px-3 py-0.5 text-center text-xs font-bold leading-none text-white;
 }
 
 /* container */
